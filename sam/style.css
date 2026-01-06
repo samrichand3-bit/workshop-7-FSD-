@@ -1,0 +1,286 @@
+/* Catppuccin Latte Theme - Student Grade Portal */
+@import url('https://fonts.googleapis.com/css2?family=Inter:wght@400;500;600&display=swap');
+
+:root {
+    --pink: #ea76cb;
+    --mauve: #8839ef;
+    --red: #d20f39;
+    --maroon: #e64553;
+    --peach: #fe640b;
+    --green: #40a02b;
+    --teal: #179299;
+    --sapphire: #209fb5;
+    --text: #4c4f69;
+    --subtext: #6c6f85;
+    --overlay: #8c8fa1;
+    --surface: #dce0e8;
+    --base: #fff0f3;
+    --card: #ffffff;
+}
+
+* {
+    margin: 0;
+    padding: 0;
+    box-sizing: border-box;
+}
+
+body {
+    font-family: 'Inter', -apple-system, BlinkMacSystemFont, sans-serif;
+    background-color: var(--base);
+    color: var(--text);
+    min-height: 100vh;
+    line-height: 1.6;
+}
+
+/* Auth pages (login/register) centered layout */
+.auth-wrapper {
+    min-height: 100vh;
+    display: flex;
+    justify-content: center;
+    align-items: center;
+    padding: 20px;
+    background-color: var(--base);
+}
+
+.auth-card {
+    background: var(--card);
+    border: 2px solid var(--surface);
+    border-radius: 12px;
+    padding: 40px;
+    width: 100%;
+    max-width: 360px;
+    transition: border-color 0.2s ease;
+}
+
+.auth-card:hover {
+    border-color: var(--mauve);
+}
+
+.auth-card h1 {
+    font-size: 22px;
+    font-weight: 600;
+    margin-bottom: 24px;
+    text-align: center;
+    color: var(--mauve);
+}
+
+.form-group {
+    margin-bottom: 16px;
+}
+
+.form-group label {
+    display: block;
+    font-size: 13px;
+    font-weight: 500;
+    margin-bottom: 6px;
+    color: var(--subtext);
+}
+
+.form-group input {
+    width: 100%;
+    padding: 10px 12px;
+    font-size: 14px;
+    font-family: inherit;
+    background: var(--card);
+    border: 1px solid var(--surface);
+    border-radius: 6px;
+    color: var(--text);
+    transition: border-color 0.2s ease;
+}
+
+.form-group input::placeholder {
+    color: var(--overlay);
+}
+
+.form-group input:focus {
+    outline: none;
+    border-color: var(--sapphire);
+}
+
+.btn {
+    display: inline-block;
+    padding: 10px 20px;
+    font-size: 14px;
+    font-weight: 500;
+    font-family: inherit;
+    text-align: center;
+    text-decoration: none;
+    border: none;
+    border-radius: 6px;
+    cursor: pointer;
+    transition: background-color 0.15s ease, transform 0.1s ease;
+}
+
+.btn:hover {
+    transform: translateY(-1px);
+}
+
+.btn:active {
+    transform: translateY(0);
+}
+
+.btn-primary {
+    width: 100%;
+    background: var(--mauve);
+    color: #fff;
+}
+
+.btn-primary:hover {
+    background: var(--pink);
+}
+
+.btn-danger {
+    background: var(--red);
+    color: #fff;
+}
+
+.btn-danger:hover {
+    background: var(--maroon);
+}
+
+.message {
+    padding: 10px 12px;
+    border-radius: 6px;
+    margin-bottom: 16px;
+    font-size: 13px;
+    text-align: center;
+}
+
+.message.success {
+    background: rgba(64, 160, 43, 0.1);
+    color: var(--green);
+    border: 1px solid rgba(64, 160, 43, 0.3);
+}
+
+.message.error {
+    background: rgba(210, 15, 57, 0.1);
+    color: var(--red);
+    border: 1px solid rgba(210, 15, 57, 0.3);
+}
+
+.auth-footer {
+    margin-top: 20px;
+    text-align: center;
+    font-size: 13px;
+    color: var(--overlay);
+}
+
+.auth-footer a {
+    color: var(--sapphire);
+    text-decoration: none;
+    font-weight: 500;
+    transition: color 0.15s ease;
+}
+
+.auth-footer a:hover {
+    color: var(--teal);
+}
+
+/* Dashboard layout */
+.navbar {
+    background: var(--card);
+    border-bottom: 1px solid var(--surface);
+    padding: 14px 24px;
+    display: flex;
+    justify-content: space-between;
+    align-items: center;
+}
+
+.navbar h1 {
+    font-size: 18px;
+    font-weight: 600;
+    color: var(--mauve);
+}
+
+.nav-links {
+    display: flex;
+    gap: 12px;
+    align-items: center;
+}
+
+.nav-link {
+    font-size: 13px;
+    color: var(--subtext);
+    text-decoration: none;
+    padding: 8px 14px;
+    border-radius: 6px;
+    transition: background 0.15s ease, color 0.15s ease;
+}
+
+.nav-link:hover {
+    background: var(--surface);
+    color: var(--sapphire);
+}
+
+.container {
+    max-width: 900px;
+    margin: 40px auto;
+    padding: 0 20px;
+}
+
+.card {
+    background: var(--card);
+    border: 1px solid var(--surface);
+    border-radius: 12px;
+    padding: 32px;
+    margin-bottom: 24px;
+    transition: border-color 0.2s ease;
+}
+
+.card:hover {
+    border-color: var(--teal);
+}
+
+.card h2 {
+    font-size: 20px;
+    font-weight: 600;
+    margin-bottom: 8px;
+    color: var(--teal);
+}
+
+.card p {
+    color: var(--subtext);
+    font-size: 14px;
+}
+
+.info-grid {
+    display: grid;
+    grid-template-columns: repeat(auto-fit, minmax(240px, 1fr));
+    gap: 16px;
+    margin-top: 24px;
+}
+
+.info-item {
+    background: var(--card);
+    border: 2px solid var(--surface);
+    border-radius: 10px;
+    padding: 20px;
+    transition: transform 0.15s ease, border-color 0.15s ease;
+}
+
+.info-item:nth-child(1) { border-color: var(--mauve); }
+.info-item:nth-child(2) { border-color: var(--sapphire); }
+.info-item:nth-child(3) { border-color: var(--peach); }
+.info-item:nth-child(4) { border-color: var(--green); }
+
+.info-item:hover {
+    transform: translateY(-2px);
+}
+
+.info-item h3 {
+    font-size: 12px;
+    text-transform: uppercase;
+    letter-spacing: 0.5px;
+    margin-bottom: 6px;
+}
+
+.info-item:nth-child(1) h3 { color: var(--mauve); }
+.info-item:nth-child(2) h3 { color: var(--sapphire); }
+.info-item:nth-child(3) h3 { color: var(--peach); }
+.info-item:nth-child(4) h3 { color: var(--green); }
+
+.info-item p {
+    font-size: 15px;
+    font-weight: 500;
+    color: var(--text);
+}
